@@ -1,12 +1,65 @@
 <html>
     <head>
-        <title>Rock</title>
+        <title>Rock, Paper, Scissors (Lizard, Spock)</title>
+        <link href="./styles.css" rel="stylesheet">
+        <script src="./scripts.js"></script>
         <!-- Link to your script file(s) and CSS in here somewhere -->
+    <body class = "body" onload = "home()">
     </head>
-    <body>
+        <h1>RPS or RPSLS? Vs. Computer or Opponent?</h1>
+        <button type="button" name = "home" onclick="playRpsOpp()">RPS with Opp</button>
 
-    <!-- Your interface markup goes here -->
-    <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
+        <button type="button" name = "home" onclick="playRps()">RPS no Opp</button>
 
-    </body>
+        <button type="button" name = "home" onclick="playRpslsOpp()">RPSLS with Opp</button>
+
+        <button type="button" name = "home" onclick="playRpsls()">RPSLS no Opp</button>
+        
+        <div name="moves">
+            <h2>What will you choose?</h2>
+            <input class="radio" type="radio" id="rock" value="rock" name="move">
+            <label for="rock">Rock</label>
+
+            <input class="radio" type="radio" id="paper" value="paper" name="move">
+            <label for="paper">Paper</label>
+
+            <input class="radio" type="radio" id="scissors" value="scissors" name="move">
+            <label for="scissors">Scissors</label>
+
+            <div name="rpslsMoves">
+                <input class="radio" type="radio" id="lizard" value="lizard" name="move">
+                <label for="lizard" >Lizard</label>
+    
+                <input class="radio" type="radio" id="spock" value="spock" name="move">
+                <label for="spock" >Spock</label>
+            </div>
+            
+        </div>
+        <button type="button" onclick="home()">Reset</button>
+        <p>
+            <span id="player"></span> <br>
+            <span id="opponent"></span> <br>
+            <span id="result"></span> <br>
+
+        </p>
+        
+
+        <div name = "home">RPS Rules:
+            Scissors CUTS Paper
+            Paper COVERS Rock
+            Rock SMOOSHES Lizard
+            
+            
+            RPSLS Rules:
+            Scissors CUTS Paper
+            Paper COVERS Rock
+            Rock SMOOSHES Lizard
+            Lizard POISONS Spock
+            Spock SMASHES Scissors
+            Scissors DECAPITATES Lizard
+            Lizard EATS Paper
+            Paper DISPROVES Spock
+            Spock VAPORIZES Rock
+            Rock CRUSHES Scissors</div>
+      </body>
 </html>
